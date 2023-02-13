@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* || IMPOSTAZIONE PAGINE */
+
+html {
+    font-family: "Exo 2";
+    /* scroll-behavior: smooth; */
+    --circleDiameter: 70vh
+}
+
+body {
+    overflow-x: hidden;
+    
+    background: linear-gradient(45deg, #ea8c55, #c75146, #ad2e24, #81171b , #38040e);
+    background-size: 200vw;
+    animation: gradient-animation 5s ease-in-out infinite;
+    -moz-animation: gradient-animation 5s ease-in-out infinite;;
+    -webkit-animation: gradient-animation 5s ease-in-out infinite;;
+    
+}
+
+
+
+@keyframes gradient-animation{
+    0%{
+        background-position: 0px 50%;
+    }
+    50%{
+        background-position: 50% 50%;
+    }
+    100%{
+        background-position: 0px 50%;
+    }
+}
+
+section {
+    block-size: 100vh;
+    /* display: grid; */
+    place-items: center;
+    border: 3px black dashed;
+}
+
+
+
+
+
+/* || FORMATTAZIONE GENERALE */
+
+
+
+/* || PRIMA PAGINA */
+
+section.welcome {
+    display:flex;
+    justify-content: center;
+}
+
+.gradient-animated{
+    background: linear-gradient(-45deg, #d9ed92, #99d98c, #34a0a4, #168aad , #1e6091);
+    background-size: 300%;
+    font-weight: 720;
+    font-size: 13vh;
+    letter-spacing: -0.3vh;
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease-in-out infinite;
+    -moz-animation: gradient-animation 5s ease-in-out infinite;
+    -webkit-animation: gradient-animation 5s ease-in-out infinite;
+}
+
+/* !! PAGINA DI PRESENTAZIONE */
+
+section.intro {
+    display:flex;
+    flex-direction: column;
+    place-items:center;
+    justify-content: center;
+    
+}
+
+h2 {
+    align-items: left;
+    color:whitesmoke
+}
+
+.p {
+    position: left;
+    padding: 5vh 5vw;
+    font-size: 4rem;
+}
+
+.hidden.ani-1 {
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show.ani-1 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+.members {
+    width: 70%;
+    padding:50vw;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap:1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.member {
+    width: min(100%, 90px);
+    height: auto;
+    background-color: orange;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    flex-grow: 1;
+}
+
+
+
+.member figure {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.member img {
+    width: min(100%, 100px);
+    border: 5px double #333;
+    border-radius: 50%;
+}
+
+.member figcaption {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    text-align:center;
+    align-items: center;
+}
+
+.hidden.ani-2 {
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(100%);
+    transition: all 2s;
+}
+
+.show.ani-2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.member:nth-child(1) {
+    transition-delay: 1000ms;
+}
+
+.member:nth-child(2) {
+    transition-delay: 1200ms;
+}
+
+.member:nth-child(3) {
+    transition-delay: 1400ms;
+}
+
+.member:nth-child(4) {
+    transition-delay: 1600ms;
+}
+
+.member:nth-child(5) {
+    transition-delay: 1800ms;
+}
+
+
+/* !! PAGINA OBIETTIVI */
+
+.hidden.ani-3 {
+    opacity: 0;
+    filter: blur(5px);
+    transition: 3s;
+}
+
+.show.ani-3 {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}
+
+
+section.goals {
+    display:flex;
+}
+
+.circle-container {
+    position: relative;
+    height: var(--circleDiameter);
+    width: var(--circleDiameter);
+    padding: 20px;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    margin: 60px auto;
+}
+
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -10px;
+}
+
+.circle-container img {
+    display: block;
+    width: 100%;
+    scale:180%;
+
+}
+.center {
+    scale:500%
+}
+
+.circle-container img:hover {
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.24);
+}
+
+.circle-container .center img:hover{
+    box-shadow: none;
+}
+
+.ob1 {transform: rotate(275.29deg) translate(calc(var(--circleDiameter)/2)) rotate(-275.29deg);}
+.ob2 {transform: rotate(296.47deg) translate(calc(var(--circleDiameter)/2)) rotate(-296.47deg);}
+.ob3 {transform: rotate(317.64deg) translate(calc(var(--circleDiameter)/2)) rotate(-317.64deg);}
+.ob4 {transform: rotate(340.40deg) translate(calc(var(--circleDiameter)/2)) rotate(-340.40deg);}
+.ob5 {transform: translate(calc(var(--circleDiameter)/2));}
+.ob6 {transform: rotate(20.17deg) translate(calc(var(--circleDiameter)/2)) rotate(-20.17deg);}
+.ob7 {transform: rotate(42.35deg) translate(calc(var(--circleDiameter)/2)) rotate(-42.35deg);}
+.ob8 {transform: rotate(64.90deg) translate(calc(var(--circleDiameter)/2)) rotate(-64.90deg);}
+.ob9 {transform: rotate(84.71deg) translate(calc(var(--circleDiameter)/2)) rotate(-84.71deg);}
+.ob10 {transform: rotate(105.88deg) translate(calc(var(--circleDiameter)/2)) rotate(-105.88deg);}
+.ob11 {transform: rotate(127.06deg) translate(calc(var(--circleDiameter)/2)) rotate(-127.06deg);}
+.ob12 {transform: rotate(149.80deg) translate(calc(var(--circleDiameter)/2)) rotate(-149.80deg);}
+.ob13 {transform: rotate(169.41deg) translate(calc(var(--circleDiameter)/2)) rotate(-169.41deg);}
+.ob14 {transform: rotate(190.59deg) translate(calc(var(--circleDiameter)/2)) rotate(-190.59deg);}
+.ob15 {transform: rotate(211.76deg) translate(calc(var(--circleDiameter)/2)) rotate(-211.76deg);}
+.ob16 {transform: rotate(232.94deg) translate(calc(var(--circleDiameter)/2)) rotate(-232.94deg);}
+.ob17 {transform: rotate(254.12deg) translate(calc(var(--circleDiameter)/2)) rotate(-254.12deg);}
+ 
+
