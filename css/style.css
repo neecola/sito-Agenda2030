@@ -54,7 +54,10 @@ section {
 }
 
 
-
+::-webkit-scrollbar {
+    display: none;
+  }
+  
 
 
 /* || PRIMA PAGINA */

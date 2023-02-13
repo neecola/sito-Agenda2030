@@ -63,8 +63,8 @@ section.goal {
     block-size: 100vh;
     scroll-snap-align: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1.5fr 3.5fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 2fr 1fr 1fr;
 
 }
 
@@ -77,12 +77,11 @@ section.goal {
 
 
     color: whitesmoke;
-    font-size: 7vw;
+    font-size: 4vw;
     text-align: left;
     text-transform: uppercase;
     padding: 2rem;
 
-    border: 1px solid black;
 
 }
 
@@ -92,24 +91,19 @@ section.goal {
     grid-row: 1;
     
     padding: 1rem 0.7rem;
-    border: 1px solid black;
 }
 
 .goal main {
     grid-column: 1 / 5;
     grid-row: 2;
 
-    color: black;
+    color: #333;
+    font-size: 2rem;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border: 1px solid black;
 
-}
-
-.goal main :is(.descrizione, .bulletpoints) {
-    border: 1px solid black;
 }
 
 .goal main .descrizione {}
@@ -120,17 +114,28 @@ section.goal {
 }
 
 .goal figure {
-    grid-column: -1;
-    grid-row: -1;
-    
-    padding-bottom: 1rem;
+    /* grid-column: 5;
+    grid-row: 4;
+     */
+    float:right;
 
+    /* padding-bottom: 1rem; */
+    width: min(100%, 350px);
+    
     display: flex;
     flex-direction: column;
-
-    border: 1px solid black;
-}
-
-.goal figure img {
+    align-items: center;
 
 }
+
+.goal figure figcaption {
+
+    font-style: italic;
+    width: inherit;
+    
+}
+
+* {
+    border: none !important;
+/*     border: 1px solid black !important;
+ */}
