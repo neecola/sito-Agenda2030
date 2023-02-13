@@ -50,16 +50,10 @@ body {
 
 section {
     block-size: 100vh;
-    /* display: grid; */
     place-items: center;
-    border: 3px black dashed;
 }
 
 
-
-
-
-/* || FORMATTAZIONE GENERALE */
 
 
 
@@ -135,7 +129,8 @@ h2 {
 .member {
     width: min(100%, 90px);
     height: auto;
-    background-color: orange;
+    background-color: #34a0a4;
+    color:snow;
     border: 2px solid black;
     border-radius: 15px;
     padding: 1rem;
