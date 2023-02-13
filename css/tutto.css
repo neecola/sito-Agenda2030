@@ -99,6 +99,7 @@ section.goal {
 
     color: #333;
     font-size: 2rem;
+    padding: 4rem;
 
     display: flex;
     flex-direction: column;
@@ -108,9 +109,11 @@ section.goal {
 
 
 .goal main .bulletpoints {
-    display: list-item;
     list-style-type: disc;
+    margin-left: 2rem;
+
 }
+
 
 .goal figure {
     grid-column: 5;
@@ -130,6 +133,7 @@ section.goal {
 
     font-style: italic;
     width: inherit;
+    text-align: center;
     
 }
 
