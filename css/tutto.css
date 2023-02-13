@@ -1,18 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
 html {
     scroll-snap-type: y mandatory;
-    
+
+    font-family: "Exo 2";
+
+
+
+
+    --goal-1-color : #f13333;
+    --goal-2-color : #ffd000;
+    --goal-3-color : #46973e;
+    --goal-4-color : #850d0d;
+    --goal-5-color : #e23e15;
+    --goal-6-color : #00caee;
+    --goal-7-color : #ffee00;
+    --goal-8-color : #c04862;
+    --goal-9-color : #df5f15;
+    --goal-10-color: #c253a1;
+    --goal-11-color: #ff9900;
+    --goal-12-color: #d6c800;
+    --goal-13-color: #297229;
+    --goal-14-color: #2a668f;
+    --goal-15-color: #55bd3b;
+    --goal-16-color: #235374;
+    --goal-17-color: #253b55;
+
+    /* todo: fare animazione tra cambio sfondo
+       * https://medium.com/web-dev-survey-from-kyoto/change-the-background-color-with-transition-animation-web-dev-survey-from-kyoto-ef2f65756e9a 
+    */
+
+}   
+
+body {
+
+
+    background-image: linear-gradient(180deg,
+            var(--goal-1-color ), #f1333385, /* 1 */
+            var(--goal-2-color ), #ffe46e85, /* 2 */
+            var(--goal-3-color ), #6fa36b85, /* 3 */
+            var(--goal-4-color ), #b95252a6, /* 4 */
+            var(--goal-5-color ), #e23e1585, /* 5 */
+            var(--goal-6-color ), #76def085, /* 6 */
+            var(--goal-7-color ), #ffee0085, /* 7 */
+            var(--goal-8-color ), #881b3385, /* 8 */
+            var(--goal-9-color ), #df5f1585, /* 9 */
+            var(--goal-10-color), #d13ba485, /* 10 */
+            var(--goal-11-color), #ff990085, /* 11 */
+            var(--goal-12-color), #d6c80085, /* 12 */
+            var(--goal-13-color), #29722985, /* 13 */
+            var(--goal-14-color), #2a668f85, /* 14 */
+            var(--goal-15-color), #55bd3b85, /* 15 */
+            var(--goal-16-color), #23537485, /* 16 */
+            var(--goal-17-color), #15325385  /* 17 */
+        );
 
 }
 
-section {
+
+
+section.goal {
     block-size: 100vh;
     scroll-snap-align: center;
-    /*scroll-snap-stop: normal;
-    
     display: grid;
-    place-items: center;*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1.5fr 3.5fr;
+
 }
 
-#obiettivo-1 {
-    background-image: linear-gradient(180deg,rgb(196, 33, 33) 30%,#ca716a 90%);
+.goal .titolo {
+    box-sizing: border-box;
+
+/*     background-color: rgb(150, 13, 9);
+ */    grid-column: 1 / -1;
+    height: 70%;
+
+
+    color: whitesmoke;
+    font-size: 7vw;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 2rem;
+
+    border: 1px solid black;
+
+}
+
+
+.goal img.logo {
+    grid-column: -1;
+    grid-row: 1;
+    
+    padding: 1rem 0.7rem;
+    border: 1px solid black;
+}
+
+.goal main {
+    grid-column: 1 / 5;
+    grid-row: 2;
+
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid black;
+
+}
+
+.goal main :is(.descrizione, .bulletpoints) {
+    border: 1px solid black;
+}
+
+.goal main .descrizione {}
+
+.goal main .bulletpoints {
+    display: list-item;
+    list-style-type: disc;
+}
+
+.goal figure {
+    grid-column: -1;
+    grid-row: -1;
+    
+    padding-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+}
+
+.goal figure img {
+
 }
